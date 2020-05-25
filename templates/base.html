@@ -1,12 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+{% load static %}
+
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <title>My Search Tool</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
-<h2>Testing to see if it works!</h2>
+<nav>
+    <div class="container nav-wrapper">
+        <a href="/" class="brand-logo">My Search Tool</a>
+        <ul id="nav-mobile" class="right">
+            <li><a href="/">Home</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+<h2 style="text-align: center">Co potrzebujesz, zanjdziejsz na My Search Tool</h2>
+    <div class="row">
+        <div class="col s4">
+            <div class="center">
+                <i class="large material-icons" style="color: #bada55">shuffle</i>
+                <p>Szybki Web Scraper</p>
+                <p class="ligth center">Wy(Scrape)uj coś tutaj</p>
+            </div>
+        </div>
 
+        <div class="col s4">
+            <div class="center">
+                <i class="large material-icons" style="color: #bada55">camera</i>
+                <p>Filtruj wyszukiwanie</p>
+                <p class="ligth center">Wbudowane filtrowanie na podstawie cen</p>
+            </div>
+        </div>
 
+        <div class="col s4">
+            <div class="center">
+                <i class="large material-icons" style="color: #bada55">favorite_border</i>
+                <p><3<3<3</p>
+                <p class="ligth center">Stworzone z pasją !!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block content %}
+
+{% endblock content %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
