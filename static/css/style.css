@@ -1,9 +1,11 @@
 .card {
     height: 400px;
+    max-height: 400px;
     overflow: hidden;
 }
 
 .card-image {
     height: 250px;
+    max-height: 250px;
     overflow: hidden
 }

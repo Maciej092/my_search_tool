@@ -5,8 +5,9 @@ from requests.compat import quote_plus
 from . import models
 
 
-BASE_URL     = 'https://losangeles.craigslist.org/search/?query={}'
-BASE_IMG_URL = 'https://images.craigslist.org/{}_300x300.jpg'
+BASE_URL     = 'https://www.olx.pl/oferty/q-{}/'
+BASE_IMG_URL = 'https://ireland.apollo.olxcdn.com/v1/files/{}-PL/image;s=644x461'
+
 
 def home(request):
     return render(request, 'base.html')
