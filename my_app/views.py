@@ -5,7 +5,7 @@ from requests.compat import quote_plus
 from . import models
 
 
-BASE = 'https://www.gumtree.pl{}'
+BASE         = 'https://www.gumtree.pl{}'
 BASE_URL     = 'https://www.gumtree.pl/s-krakow/v1l3200208p1?q={}'
 BASE_IMG_URL = 'https://i.ebayimg.com/images/g/{}/s-l140.jpg'
 
@@ -20,7 +20,6 @@ def new_search(request):
     final_url = BASE_URL.format(quote_plus(search))
     response  = requests.get(final_url)
     data      = response.text
-    print(data)
     soup      = BeautifulSoup(data, features='html.parser')
 
     post_listings = soup.find_all('div', {'class': 'tileV1'})
@@ -32,9 +31,7 @@ def new_search(request):
         post_titles = post.find(class_='tile-title-text').text
         post_url    = post.find('a').get('href')
         post_url    = BASE.format(post_url)
-        print(post_titles)
-        print('======================')
-        print(post_url)
+
         if post.find(class_='ad-price'):
             post_price  = post.find(class_='ad-price').text
         else:
