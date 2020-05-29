@@ -9,3 +9,7 @@
     max-height: 250px;
     overflow: hidden
 }
+
+.nav-wrapper {
+    background-color: #4CAF50;
+}
